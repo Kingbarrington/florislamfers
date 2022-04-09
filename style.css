@@ -18,14 +18,25 @@ body {
 
 }
 
-.home > h1 {
-    color: var(--main-color);
-    margin-left: 190px;
+h1 {
+    display: inline;
     font-size: 96px;
     font-weight: 400;
-
+    color: var(--main-color);
 }
 
+#typing-box {
+    margin-left: 190px;
+}
+
+#cursor {
+    
+}
+
+@keyframes blink {
+    0% {color: var(--main-color);}
+    49% {color: #232323;}
+}
 main {
     display: grid;
     justify-content: center;
@@ -59,7 +70,7 @@ a {
     width: 100%;
     max-width: 1920px;
     height: 100vh;
-    display: grid;
+    display: flex;
     align-items: center;
     justify-content: start;
     justify-self: center;

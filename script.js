@@ -1,6 +1,7 @@
 //DOM
 const link = document.getElementById("link");
 const typingBox = document.getElementById("typing-box");
+const cursor = document.getElementById("cursor");
 //Global
 
 //Global arrays
@@ -18,8 +19,7 @@ const emoji = [
   "🐠",
 ];
 
-const fl = "Floris Lamfers"
-
+const fl = "Floris Lamfers";
 
 //Utility functions
 
@@ -44,13 +44,16 @@ randomFavicon();
 let i = 0;
 
 const typeWord = () => {
-    if(i < fl.length) {
-        typingBox.innerHTML += fl.charAt(i);
-        i++;
-        setTimeout(typeWord, 140)
-    }
+  if (i < fl.length) {
+    typingBox.innerHTML += fl.charAt(i);
+    i++;
+    setTimeout(typeWord, 140);
+  }
+  if (i === fl.length){
+      cursor.style.animation = "blink 1s steps(1, start) infinite"
+  }
 };
+
+
 typeWord();
-
-
 
