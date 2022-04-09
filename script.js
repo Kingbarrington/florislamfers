@@ -1,6 +1,6 @@
 //DOM
 const link = document.getElementById("link");
-
+const typingBox = document.getElementById("typing-box");
 //Global
 
 //Global arrays
@@ -17,6 +17,9 @@ const emoji = [
   "🐟",
   "🐠",
 ];
+
+const fl = "FLoris Lamfers"
+
 
 //Utility functions
 
@@ -38,5 +41,16 @@ const randomFavicon = () => {
 randomFavicon();
 
 //Typing animation
+let i = 0;
+
+const typeWord = () => {
+    if(i < fl.length) {
+        typingBox.innerHTML += fl.charAt(i);
+        i++;
+        setTimeout(typeWord, 140)
+    }
+};
+typeWord();
+
 
 
