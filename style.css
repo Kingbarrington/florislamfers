@@ -6,4 +6,29 @@
 
 html {
     font-family: "Inter", sans-serif;
+    font-size: 20px;
 }
+
+main {
+    display: grid;
+    justify-content: center;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    max-width: 1920px;
+    padding: 0.7rem;
+    display: grid;
+    justify-content: end;
+    justify-self: center;
+    background-color: violet;
+}
+
+li {
+    display: inline;
+    list-style: none;
+    font-size: 1.4rem;
+    padding: 0.7rem;
+}
+
