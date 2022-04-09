@@ -18,7 +18,7 @@ const emoji = [
   "🐠",
 ];
 
-const fl = "FLoris Lamfers"
+const fl = "Floris Lamfers"
 
 
 //Utility functions

@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+:root {
+    --main-color: #14ff00;
+}
+
 html {
     font-family: "Inter", sans-serif;
     font-size: 20px;
@@ -15,7 +19,7 @@ body {
 }
 
 .home > h1 {
-    color: #14ff00;
+    color: var(--main-color);
     margin-left: 190px;
     font-size: 96px;
     font-weight: 400;
@@ -36,7 +40,6 @@ header {
     display: grid;
     justify-content: end;
     justify-self: center;
-    background-color: violet;
 }
 
 li {
@@ -45,6 +48,11 @@ li {
     font-size: 36px;
     padding: 0.7rem;
     margin-top: 77px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
 }
 
 .home {
