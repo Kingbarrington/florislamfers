@@ -14,21 +14,25 @@ body {
 
 }
 
-h1 {
+.home > h1 {
     color: #14ff00;
+    margin-left: 190px;
+    font-size: 96px;
+    font-weight: 400;
+
 }
 
 main {
-   
-    
-
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
 }
 
 header {
     position: fixed;
     width: 100%;
     max-width: 1920px;
-    padding: 0.7rem;
+    padding: 2rem;
     display: grid;
     justify-content: end;
     justify-self: center;
@@ -38,8 +42,9 @@ header {
 li {
     display: inline;
     list-style: none;
-    font-size: 1.4rem;
+    font-size: 36px;
     padding: 0.7rem;
+    margin-top: 77px;
 }
 
 .home {
@@ -49,4 +54,6 @@ li {
     display: grid;
     align-items: center;
     justify-content: start;
+    justify-self: center;
+
 }
