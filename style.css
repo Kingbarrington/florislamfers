@@ -9,9 +9,19 @@ html {
     font-size: 20px;
 }
 
+body {
+    background-color: #232323;
+
+}
+
+h1 {
+    color: #14ff00;
+}
+
 main {
-    display: grid;
-    justify-content: center;
+   
+    
+
 }
 
 header {
@@ -32,3 +42,11 @@ li {
     padding: 0.7rem;
 }
 
+.home {
+    width: 100%;
+    max-width: 1920px;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: start;
+}

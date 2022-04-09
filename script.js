@@ -1,9 +1,9 @@
 //DOM
 const link = document.getElementById("link");
 
-//GLOBAL
+//Global
 
-//GLOBAL ARRAYS
+//Global arrays
 const emoji = [
   "🦃",
   "🐓",
@@ -18,6 +18,13 @@ const emoji = [
   "🐠",
 ];
 
+//Utility functions
+
+const randomNumberBetween = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
+
+//Random Favicon
 const randomFavicon = () => {
   link.setAttribute(
     "href",
@@ -28,8 +35,8 @@ const randomFavicon = () => {
   console.log(link.getAttribute("href"));
 };
 
-const randomNumberBetween = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-};
-
 randomFavicon();
+
+//Typing animation
+
+
