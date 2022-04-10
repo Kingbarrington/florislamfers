@@ -69,12 +69,12 @@ a {
     color: var(--main-color);
 }
 
-.menu {
+#menu {
     color: #14ff00;
     cursor: pointer;
 }
 
-.menu > div {
+#menu > div {
     background-color: #14ff00;
     height: 4px;
     width: 52px;
@@ -82,7 +82,7 @@ a {
     display: none;
 }
 
-#bottom {
+#menu > #bottom {
     width: 25px;
 }
 
@@ -94,7 +94,9 @@ a {
     top: 69px;
     text-align: center;
     box-shadow: 0px 2px 20px 0px #14ff00;
-
+    transition: all 200ms;
+    transform: translatey(-400px);
+    opacity: 0;
 }
 
 #dropdown > ul > li {
@@ -139,7 +141,7 @@ a {
     li {
         display: none;
     }
-    .menu > div {
+    #menu > div {
         display: block;
     }
 }

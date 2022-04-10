@@ -2,6 +2,8 @@
 const link = document.getElementById("link");
 const typingBox = document.getElementById("typing-box");
 const cursor = document.getElementById("cursor");
+const menu = document.getElementById("menu");
+const dropdown = document.getElementById("dropdown");
 //Global
 
 //Global arrays
@@ -55,5 +57,9 @@ const typeWord = () => {
 };
 typeWord();
 
-
+//dropdown logic 
+menu.onclick = e => {
+  dropdown.style.transform = "translatey(0)";
+  dropdown.style.opacity = "1";
+}
 
