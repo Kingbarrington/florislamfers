@@ -57,6 +57,13 @@ const typeWord = () => {
 };
 typeWord();
 
+window.onkeydown = (e) => {
+  if (e.key === "Backspace") typingBox.innerHTML = typingBox.innerHTML.slice(0, -1);
+  if (32 < e.keyCode && e.keyCode < 127) typingBox.innerHTML += e.key;
+};
+
+
+
 //dropdown logic
 menu.onclick = (e) => {
   if (

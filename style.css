@@ -11,6 +11,7 @@
 html {
     font-family: "Inter", sans-serif;
     font-size: 20px;
+    scroll-behavior: smooth;
 }
 
 .hidden {
@@ -87,8 +88,6 @@ a {
     width: 25px;
 }
 
-
-
 /* dropdown */
 #dropdown {
     width: 100vw;
@@ -105,6 +104,8 @@ a {
     display: block;
     margin: 1rem;
 }
+
+/* home screen */
 
 .home {
     width: 100%;
@@ -144,4 +145,10 @@ a {
     #menu > div {
         display: block;
     }
+}
+
+/* tic tac toe screen */
+
+#game {
+    height: 100vh;
 }
