@@ -53,7 +53,5 @@ const typeWord = () => {
       cursor.style.animation = "blink 1s steps(1, start) infinite"
   }
 };
-
-
 typeWord();
 
