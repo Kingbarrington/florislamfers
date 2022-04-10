@@ -72,6 +72,7 @@ a {
 #menu {
     color: #14ff00;
     cursor: pointer;
+    padding: 10px;
 }
 
 #menu > div {
@@ -103,8 +104,6 @@ a {
     display: block;
     margin: 1rem;
 }
-
-
 
 .home {
     width: 100%;

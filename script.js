@@ -59,7 +59,10 @@ typeWord();
 
 //dropdown logic
 menu.onclick = (e) => {
-  if (dropdown.getAttribute("class") === null || dropdown.getAttribute("class") === "") {
+  if (
+    dropdown.getAttribute("class") === null ||
+    dropdown.getAttribute("class") === ""
+  ) {
     dropdown.style.transform = "translatey(0)";
     dropdown.style.opacity = "1";
     dropdown.setAttribute("class", "active");
@@ -68,5 +71,4 @@ menu.onclick = (e) => {
     dropdown.style.opacity = "0";
     dropdown.classList.remove("active");
   }
-  
 };
