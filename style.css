@@ -28,6 +28,8 @@ h1 {
     font-size: 80px;
     font-weight: 400;
     color: var(--main-color);
+    height: 1em;
+    overflow-wrap: normal;
 }
 
 #typing-box {
@@ -115,7 +117,7 @@ a {
     align-items: center;
     justify-content: start;
     justify-self: center;
-
+    overflow: hidden;
 }
 
 @media screen and (max-width: 1200px) {
