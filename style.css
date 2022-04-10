@@ -29,9 +29,6 @@ h1 {
     margin-left: 150px;
 }
 
-#cursor {
-    
-}
 
 @keyframes blink {
     0% {color: var(--main-color);}
@@ -53,6 +50,8 @@ header {
     justify-self: center;
 }
 
+
+/* navbar */
 li {
     display: inline;
     list-style: none;
@@ -64,6 +63,23 @@ li {
 a {
     text-decoration: none;
     color: var(--main-color);
+}
+
+.menu {
+    color: #14ff00;
+    cursor: pointer;
+}
+
+.menu > div {
+    background-color: #14ff00;
+    height: 5px;
+    width: 52px;
+    margin: 12px;
+    display: none;
+}
+
+#bottom {
+    width: 25px;
 }
 
 .home {
@@ -100,5 +116,8 @@ a {
     }
     li {
         display: none;
+    }
+    .menu > div {
+        display: block;
     }
 }
