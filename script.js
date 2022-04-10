@@ -51,15 +51,22 @@ const typeWord = () => {
     i++;
     setTimeout(typeWord, 140);
   }
-  if (i === fl.length){
-      cursor.style.animation = "blink 1s steps(1, start) infinite"
+  if (i === fl.length) {
+    cursor.style.animation = "blink 1s steps(1, start) infinite";
   }
 };
 typeWord();
 
-//dropdown logic 
-menu.onclick = e => {
-  dropdown.style.transform = "translatey(0)";
-  dropdown.style.opacity = "1";
-}
-
+//dropdown logic
+menu.onclick = (e) => {
+  if (dropdown.getAttribute("class") === null || dropdown.getAttribute("class") === "") {
+    dropdown.style.transform = "translatey(0)";
+    dropdown.style.opacity = "1";
+    dropdown.setAttribute("class", "active");
+  } else {
+    dropdown.style.transform = "translatey(-400px)";
+    dropdown.style.opacity = "0";
+    dropdown.classList.remove("active");
+  }
+  
+};
