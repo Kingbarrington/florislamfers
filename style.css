@@ -72,6 +72,12 @@ a {
     color: var(--main-color);
 }
 
+a:hover {
+    
+    
+}
+
+
 #menu {
     color: #14ff00;
     cursor: pointer;

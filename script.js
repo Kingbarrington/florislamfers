@@ -4,8 +4,9 @@ const typingBox = document.getElementById("typing-box");
 const cursor = document.getElementById("cursor");
 const menu = document.getElementById("menu");
 const dropdown = document.getElementById("dropdown");
+const dropdownA = document.querySelectorAll(".dropdown");
 //Global
-
+console.log(dropdownA[1])
 //Global arrays
 const emoji = [
   "🦃",
@@ -58,13 +59,17 @@ const typeWord = () => {
 typeWord();
 
 window.onkeydown = (e) => {
-  if (e.key === "Backspace") typingBox.innerHTML = typingBox.innerHTML.slice(0, -1);
+  if (e.key === "Backspace")
+    typingBox.innerHTML = typingBox.innerHTML.slice(0, -1);
   if (32 < e.keyCode && e.keyCode < 127) typingBox.innerHTML += e.key;
 };
 
-
-
 //dropdown logic
+const menuHide = () => {
+  dropdown.style.transform = "translatey(-400px)";
+  dropdown.style.opacity = "0";
+  dropdown.classList.remove("active");
+}
 menu.onclick = (e) => {
   if (
     dropdown.getAttribute("class") === null ||
@@ -74,8 +79,10 @@ menu.onclick = (e) => {
     dropdown.style.opacity = "1";
     dropdown.setAttribute("class", "active");
   } else {
-    dropdown.style.transform = "translatey(-400px)";
-    dropdown.style.opacity = "0";
-    dropdown.classList.remove("active");
+    menuHide();
   }
 };
+
+dropdownA[0].onclick = menuHide;
+dropdownA[1].onclick = menuHide;
+dropdownA[2].onclick = menuHide;
