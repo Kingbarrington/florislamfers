@@ -163,3 +163,16 @@ a:active {
 #game {
     height: 100vh;
 }
+
+.board {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 580px;
+    margin-left: 150px;
+}
+
+.box {
+    font-size: 80px;
+    color: var(--main-color);
+}
