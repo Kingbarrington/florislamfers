@@ -6,7 +6,7 @@ const menu = document.getElementById("menu");
 const dropdown = document.getElementById("dropdown");
 const dropdownA = document.querySelectorAll(".dropdown");
 //Global
-console.log(dropdownA[1])
+
 //Global arrays
 const emoji = [
   "🦃",
