@@ -38,9 +38,15 @@ h1 {
 
 
 @keyframes blink {
-    0% {color: var(--main-color);}
-    49% {color: #232323;}
+    0% {
+        color: var(--main-color);
+    }
+
+    49% {
+        color: #232323;
+    }
 }
+
 main {
     display: grid;
     justify-content: center;
@@ -76,9 +82,7 @@ a:hover {
     color: #19cc08;
 }
 
-a:active {
-   
-}
+a:active {}
 
 
 #menu {
@@ -87,7 +91,7 @@ a:active {
     padding: 10px;
 }
 
-#menu > div {
+#menu>div {
     background-color: var(--main-color);
     height: 4px;
     width: 52px;
@@ -95,7 +99,7 @@ a:active {
     display: none;
 }
 
-#menu > #bottom {
+#menu>#bottom {
     width: 25px;
 }
 
@@ -111,7 +115,7 @@ a:active {
     opacity: 0;
 }
 
-#dropdown > ul > li {
+#dropdown>ul>li {
     display: block;
     margin: 1rem;
 }
@@ -130,30 +134,37 @@ a:active {
 }
 
 @media screen and (max-width: 1200px) {
+
     #typing-box,
     #cursor {
         font-size: 3rem;
     }
+
     #typing-box {
         margin-left: 1rem;
     }
+
     li {
         font-size: 1.2rem;
     }
+
     header {
         padding: 1rem;
     }
 }
 
 @media screen and (max-width: 550px) {
+
     #typing-box,
     #cursor {
         font-size: 2rem;
     }
+
     li {
         display: none;
     }
-    #menu > div {
+
+    #menu>div {
         display: block;
     }
 }
@@ -180,4 +191,31 @@ a:active {
     color: var(--main-color);
     text-align: center;
     transition: all 200ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one,
+.four,
+.seven {
+    border-right: 7px solid var(--main-color);
+}
+
+.three, 
+.six, 
+ .nine {
+    border-left: 7px solid var(--main-color);
+}
+
+.one,
+.two,
+.three {
+    border-bottom: 7px solid var(--main-color);
+}
+
+.four,
+.five,
+.six {
+    border-bottom: 7px solid var(--main-color);
 }

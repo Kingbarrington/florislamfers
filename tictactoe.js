@@ -2,9 +2,9 @@
 const box = document.querySelectorAll(".box");
 //Global
 const board = [
-  ["X", "", ""],
-  ["", "X", ""],
-  ["", "", "X"],
+  ["X", "O", "O"],
+  ["X", "X", "O"],
+  ["X", "O", "X"],
 ];
 const human = "X";
 const ai = "O";
@@ -22,7 +22,8 @@ const drawBoard = () => {
 
 drawBoard();
 
-box.onclick = (e) => {
-    console.log(e);
+game.onclick = (e) => {
+  
+    console.log(e.path[0]);
 }
 
