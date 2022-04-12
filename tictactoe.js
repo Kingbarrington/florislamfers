@@ -22,8 +22,13 @@ const drawBoard = () => {
 
 drawBoard();
 
-game.onclick = (e) => {
-  
-    e.path[0].innerHTML = human;
+const place = (element, player) => {
+  element.innerHTML = player;
+}
+
+
+window.onclick = (e) => {   
+  let currentElement = e.path[0].childNodes[0];
+  place(currentElement, human);
 }
 

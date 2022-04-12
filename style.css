@@ -192,10 +192,10 @@ a:active {}
     font-size: 80px;
     color: var(--main-color);
     text-align: center;
-    transition: all 200ms;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 500ms;
 }
 
 .one,
