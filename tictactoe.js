@@ -2,9 +2,9 @@
 const box = document.querySelectorAll(".box");
 //Global
 const board = [
-  ["X", "", "X"],
-  ["", "X", ""],
-  ["", "", "X"],
+  ["X", "O", ""],
+  ["O", "X", "X"],
+  ["X", "X", "O"],
 ];
 const human = "X";
 const ai = "O";
@@ -34,17 +34,18 @@ const winChecker = (arr) => {
     for (let j = 0; j < arr[i].length; j++) {
       if (arr[i][j] !== "") if (arr[i][j] === "X") counterX++;
       if (arr[i][j] === "O") counterY++;
+      if (arr[i][j] !== "") counter++;
       if (counterX === 3) {
         console.log("X won!");
-        return 10;
+      
       }
       if (counterY === 3) {
         console.log("O won!");
-        return -10;
+        
       }
       if (counter === 9) {
         console.log("draw");
-        return 0;
+    
       }
     }
   }
@@ -56,40 +57,40 @@ const winChecker = (arr) => {
       if (arr[j][i] === "O") counterY++;
       if (counterX === 3) {
         console.log("X won!");
-        return 10;
+      
       }
       if (counterY === 3) {
         console.log("O won!");
-        return -10;
+        
       }
     }
   }
   if (board[0][0] === "X" && board[1][1] === "X" && board[2][2] === "X") {
     console.log("X won!");
-    return 10;
+  
   } else if (
     board[0][2] === "X" &&
     board[1][1] === "X" &&
     board[2][0] === "X"
   ) {
     console.log("X won!");
-    return 10;
+  
   }
 
   if (board[0][0] === "O" && board[1][1] === "O" && board[2][2] === "O") {
     console.log("O won!");
-    return -10;
+    
   } else if (
     board[0][2] === "O" &&
     board[1][1] === "O" &&
     board[2][0] === "O"
   ) {
     console.log("O won!");
-    return -10;
+    
   }
 };
 
-winChecker(board);
+
 
 window.onclick = (e) => {
   let currentElement = e.path[0].childNodes[0];
@@ -125,37 +126,10 @@ let moves = [];
 let bestMove = [];
 
 const minimax = (player) => {
-  console.log("minimax call");
-  if (player === human) {
-    let max = -10000000;
-    pseudoPlace(pseudoBoard, human);
 
-    if (winChecker(pseudoBoard) !== undefined) {
-      if (winChecker(pseudoBoard) > max) {
-        max = winChecker(pseudoBoard);
-        console.log(max);
-        bestMove = moves[0];
-        console.log(bestMove);
-        moves = [];
-        pseudoBoard = board;
-      }
-    }
-    minimax(ai);
-  }
-  if (player === ai) {
-    let min = 10000000;
-    pseudoPlace(pseudoBoard, ai);
-    if (winChecker(pseudoBoard) !== undefined) {
-      if (winChecker(pseudoBoard) < min) {
-        min = winChecker(pseudoBoard);
-        console.log(min);
-        bestMove = moves[0];
-        console.log(bestMove);
-        moves = [];
-        pseudoBoard = board;
-      }
-    }
-    // minimax(human);
+
+  if (winChecker(pseudoBoard) === 10) {
+    
   }
 };
 minimax(human);
