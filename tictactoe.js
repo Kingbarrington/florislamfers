@@ -37,15 +37,15 @@ const winChecker = (arr) => {
       if (arr[i][j] !== "") counter++;
       if (counterX === 3) {
         console.log("X won!");
-        return 10;
+      
       }
       if (counterY === 3) {
         console.log("O won!");
-        return -10;
+        
       }
       if (counter === 9) {
         console.log("draw");
-        return 0;
+    
       }
     }
   }
@@ -57,36 +57,36 @@ const winChecker = (arr) => {
       if (arr[j][i] === "O") counterY++;
       if (counterX === 3) {
         console.log("X won!");
-        return 10;
+      
       }
       if (counterY === 3) {
         console.log("O won!");
-        return -10;
+        
       }
     }
   }
   if (board[0][0] === "X" && board[1][1] === "X" && board[2][2] === "X") {
     console.log("X won!");
-    return 10;
+  
   } else if (
     board[0][2] === "X" &&
     board[1][1] === "X" &&
     board[2][0] === "X"
   ) {
     console.log("X won!");
-    return 10;
+  
   }
 
   if (board[0][0] === "O" && board[1][1] === "O" && board[2][2] === "O") {
     console.log("O won!");
-    return -10;
+    
   } else if (
     board[0][2] === "O" &&
     board[1][1] === "O" &&
     board[2][0] === "O"
   ) {
     console.log("O won!");
-    return -10;
+    
   }
 };
 
